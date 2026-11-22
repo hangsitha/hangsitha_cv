@@ -4,19 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - អ្នកគ្រូ ហង់ ស៊ីថា (Ms. Hang Sitha)</title>
+  <link rel="icon" href="hangsitha.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #14532d;
+      --primary-dark: #0f3d21;
       --accent: #0f766e;
       --accent-soft: #f0fdf4;
+      --soft-border: #bbf7d0;
       --ink: #1e293b;
       --muted: #64748b;
       --border: #e2e8f0;
       --paper: #ffffff;
+      --card: #f8fafc;
       --bg: #eef2f6;
+      --font-sans: 'Kantumruy Pro', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     * {
@@ -26,11 +31,14 @@
     }
 
     body {
-      font-family: 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: var(--font-sans);
       background-color: var(--bg);
       color: var(--ink);
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 14px;
       padding: 24px 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     /* Action Bar */
@@ -62,7 +70,7 @@
     .btn {
       border: none;
       padding: 9px 16px;
-      font-family: inherit;
+      font-family: var(--font-sans);
       font-size: 13.5px;
       font-weight: 600;
       border-radius: 7px;
@@ -85,7 +93,7 @@
     .btn-outline {
       background-color: var(--accent-soft);
       color: var(--primary);
-      border: 1px solid #bbf7d0;
+      border: 1px solid var(--soft-border);
     }
 
     .btn-outline:hover {
@@ -106,7 +114,7 @@
 
     /* Left Sidebar */
     .sidebar {
-      background: linear-gradient(180deg, var(--primary) 0%, #0f3d21 100%);
+      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #ffffff;
       padding: 30px 22px;
       display: flex;
@@ -115,50 +123,46 @@
     }
 
     .photo-box {
-      width: 128px;
-      height: 152px;
+      width: 132px;
+      height: 158px;
       margin: 0 auto 4px auto;
       border-radius: 10px;
       border: 3px solid rgba(255, 255, 255, 0.85);
       background: rgba(255, 255, 255, 0.12);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 8px;
-      font-size: 12px;
-      color: #e2e8f0;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     }
 
-    .photo-box span {
-      font-size: 11px;
-      opacity: 0.85;
-      margin-top: 4px;
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .side-section h3 {
       font-size: 13.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
       color: #bbf7d0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-      padding-bottom: 5px;
+      padding-bottom: 6px;
       margin-bottom: 10px;
     }
 
     .info-list {
       list-style: none;
-      font-size: 12.8px;
+      font-size: 13px;
+      line-height: 1.65;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
 
     .info-list li {
       display: flex;
       flex-direction: column;
-      gap: 1px;
+      gap: 2px;
     }
 
     .info-list a {
@@ -168,21 +172,23 @@
     }
 
     .label {
-      font-size: 11px;
+      font-size: 11.5px;
+      font-weight: 500;
       color: #86efac;
     }
 
     .skill-list {
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
 
     .skill-pill {
       background: rgba(255, 255, 255, 0.12);
-      padding: 6px 10px;
+      padding: 7px 10px;
       border-radius: 6px;
-      font-size: 12.5px;
+      font-size: 12.8px;
+      line-height: 1.55;
       border-left: 3px solid #4ade80;
     }
 
@@ -191,48 +197,50 @@
       padding: 32px 34px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 22px;
     }
 
     .header-banner {
       border-bottom: 2px solid var(--accent-soft);
-      padding-bottom: 14px;
+      padding-bottom: 16px;
     }
 
     .header-banner h1 {
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 700;
       color: var(--primary);
-      line-height: 1.25;
+      line-height: 1.35;
     }
 
     .header-banner .en-name {
+      font-family: 'Plus Jakarta Sans', var(--font-sans);
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 0.8px;
       color: var(--accent);
       margin-top: 2px;
     }
 
     .header-banner .role {
-      margin-top: 8px;
+      margin-top: 10px;
       display: inline-block;
       background: var(--accent-soft);
       color: var(--primary);
       font-size: 13.5px;
       font-weight: 600;
-      padding: 4px 12px;
+      padding: 4px 14px;
       border-radius: 999px;
-      border: 1px solid #bbf7d0;
+      border: 1px solid var(--soft-border);
     }
 
     .section-title {
-      font-size: 15.5px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--primary);
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
     .section-title::after {
@@ -242,14 +250,35 @@
       background: var(--border);
     }
 
+    .section-header {
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 10px;
+      line-height: 1.4;
+    }
+
+    .section-header p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
+      padding-left: 14px;
+    }
+
     .summary-text {
       font-size: 13.8px;
+      line-height: 1.75;
       color: var(--ink);
       text-align: justify;
     }
 
     .entry {
-      margin-bottom: 13px;
+      margin-bottom: 14px;
     }
 
     .entry:last-child {
@@ -265,7 +294,7 @@
     }
 
     .entry-title {
-      font-size: 14.2px;
+      font-size: 14.5px;
       font-weight: 700;
       color: var(--ink);
     }
@@ -275,57 +304,67 @@
       font-weight: 600;
       color: var(--accent);
       background: var(--accent-soft);
-      padding: 2px 8px;
-      border-radius: 5px;
+      border: 1px solid var(--soft-border);
+      padding: 2px 9px;
+      border-radius: 999px;
     }
 
     .entry-org {
       font-size: 13px;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-top: 2px;
+      margin-bottom: 5px;
     }
 
-    .bullet-list {
+    .bullet-list,
+    .list-clean {
       margin-left: 18px;
-      font-size: 13.2px;
+      font-size: 13.3px;
+      line-height: 1.7;
       color: var(--ink);
     }
 
-    .bullet-list li {
-      margin-bottom: 3px;
+    .bullet-list li,
+    .list-clean li {
+      margin-bottom: 5px;
     }
 
-    .two-col {
+    .bullet-list li:last-child,
+    .list-clean li:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid-2 {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
-    .card-box {
-      background: #f8fafc;
+    .card {
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 11px 13px;
-      font-size: 12.8px;
+      border-radius: 10px;
+      padding: 14px 15px;
     }
 
-    .card-box strong {
-      display: block;
+    .card h3 {
+      font-size: 14.2px;
+      font-weight: 700;
       color: var(--primary);
-      margin-bottom: 4px;
-      font-size: 13.2px;
+      margin-bottom: 8px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .ref-item {
-      margin-bottom: 7px;
-      padding-bottom: 6px;
-      border-bottom: 1px dashed #e2e8f0;
-    }
-
-    .ref-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
+    .card p {
+      font-size: 13px;
+      line-height: 1.65;
     }
 
     /* Print & PDF Styles */
@@ -364,108 +403,29 @@
         gap: 14px;
       }
 
-      .entry, .card-box, .side-section {
+      .entry,
+      .card,
+      .side-section {
         break-inside: avoid;
         page-break-inside: avoid;
       }
     }
 
-    @media (max-width: 780px) {
+    @media (max-width: 840px) {
       .cv-sheet {
         grid-template-columns: 1fr;
       }
-      .two-col {
+
+      .grid-2,
+      .grid-3 {
         grid-template-columns: 1fr;
       }
+
       .main {
         padding: 22px 18px;
       }
-      
-      .section-header {
-      margin-bottom: 18px;
-      }
-      
-      .section-header h2 {
-      font-size: 22px;
-      color: var(--primary);
-      border-left: 4px solid var(--primary);
-      padding-left: 12px;
-      }
-      
-      .section-header p {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 4px;
-      padding-left: 16px;
-     }
-      
-      .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-     }
-
-     .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-     }
-
-     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
-     }
-
-     .card h3 {
-      font-size: 16px;
-      color: var(--primary);
-      margin-bottom: 8px;
-     }
-
-     .meta-tag {
-      display: inline-block;
-      background: var(--soft-green);
-      color: var(--primary);
-      border: 1px solid var(--soft-border);
-      font-size: 12.5px;
-      font-weight: 600;
-      padding: 2px 10px;
-      border-radius: 999px;
-      margin-bottom: 8px;
-     }
-
-     .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-     }
-
-     .info-table td {
-      padding: 8px 6px;
-      border-bottom: 1px solid #f1f5f9;
-      vertical-align: top;
-     }
-      
-     .info-table td:first-child {
-      width: 170px;
-      font-weight: 600;
-      color: var(--muted);
-     }
-
-     .list-clean {
-      margin-left: 18px;
-      font-size: 14px;
-     }
-
-     .list-clean li {
-      margin-bottom: 6px;
-     }
     }
   </style>
-  <link rel="icon" href="hangsitha.jpg">
 </head>
 <body>
 
@@ -489,14 +449,15 @@
     <!-- Left Sidebar -->
     <aside class="sidebar">
       <div class="photo-box">
-        <img src="hangsitha.jpg" alt="អ្នកគ្រូ ហង់ ស៊ីថា (Ms. Hang Sitha)" style="width: 100%; height: 100%; object-fit: cover; border-radius: 7px;">
+        <img src="hangsitha.jpg" alt="អ្នកគ្រូ ហង់ ស៊ីថា (Ms. Hang Sitha)">
       </div>
+
       <div class="side-section">
         <h3>ព័ត៌មានទំនាក់ទំនង</h3>
         <ul class="info-list">
           <li>
             <span class="label">ទីលំនៅបច្ចុប្បន្ន</span>
-            <span> ផ្ទះលេខ 79ស20 ភូមិ 7 សង្កាត់ទន្លេបាសាក់ ខណ្ឌចំការមន រាជធានីភ្នំពេញ</span>
+            <span>ផ្ទះលេខ 79ស20 ភូមិ 7 សង្កាត់ទន្លេបាសាក់ ខណ្ឌចំការមន រាជធានីភ្នំពេញ</span>
           </li>
           <li>
             <span class="label">លេខទូរស័ព្ទ</span>
@@ -602,73 +563,72 @@
             <span class="entry-time">១៩៩១ – ២០០១</span>
           </div>
           <ul class="bullet-list">
-            <li><strong>វិញ្ញាបនបត្រគ្រូបង្រៀនកម្រិតបឋមសិក្សា</strong> — នាយកដ្ឋានសាលាគរុកោសល្យ និងវិក្រឹតការរាជធានី (សិក្សា ១១+២)</li>
+            <li><strong>វិញ្ញាបនបត្រគ្រូបង្រៀនកម្រិតបឋមសិក្សា</strong> — នាយកដ្ឋានសាលាគរុកោសល្យ និងវិក្រឹតការរាជធានី (សិក្សា ១១+២)។</li>
             <li><strong>វិញ្ញាបនបត្របណ្តុះបណ្តាលគរុកោសល្យ</strong> — សាលាគរុកោសល្យ និងវិក្រឹតការ រាជធានីភ្នំពេញ (១៩៩១ – ១៩៩៣)។</li>
             <li><strong>វិញ្ញាបនបត្រសិក្សា</strong> — វិទ្យាស្ថានកម្ពុជាដើម្បីសិទ្ធិមនុស្ស (១៩៩៦ – ១៩៩៦)។</li>
             <li><strong>Training Session on Human Rights Teaching Methodology for Primary Schools</strong> — Cambodian Institute of Human Rights (July 29 to August 03, 1996)។</li>
           </ul>
         </div>
-
- <!-- Education & Certificates -->
-    <section id="education">
-      <div class="section-header">
-        <h2>ប្រវត្តិការសិក្សា វគ្គបណ្តុះបណ្តាល និងវិញ្ញាបនបត្រ</h2>
-        <p>សញ្ញាបត្រ វិញ្ញាបនបត្រគរុកោសល្យ និងវគ្គបណ្តុះបណ្តាលផ្សេងៗ</p>
       </div>
-      <div class="grid-2">
-        <div class="card">
-          <h3>កម្រិតវប្បធម៌ទូទៅ</h3>
-          <ul class="list-clean">
-            <li><strong>មធ្យមសិក្សាទុតិយភូមិ (២០០៦ – ២០០៨)៖</strong> រៀនបំពេញវិជ្ជា នៅសាលាមធ្យម (សម័យប្រឡង ០៤ សីហា ២០០៨ មណ្ឌល ទ.ហ៊ុនសែន ប៊ុនរ៉ានី វត្តភ្នំ និទ្ទេស E)។</li>
-            <li><strong>មធ្យមសិក្សាបឋមភូមិ (១៩៩៤ – ១៩៩៨)៖</strong> សាលា វត្តកោះ (ក្រុងភ្នំពេញ)។</li>
-            <li><strong>បឋមសិក្សា (១៩៨២ – ១៩៨៩)៖</strong> សាលា វត្តព្រះស្រីតារពេជ្រ ខេត្តព្រៃវែង។</li>
-          </ul>
-        </div>
 
-        <div class="card">
-          <h3>គរុកោសល្យ និងវគ្គបណ្តុះបណ្តាល</h3>
-          <ul class="list-clean">
-            <li><strong>វិញ្ញាបនបត្រគ្រូបង្រៀនកម្រិតបឋមសិក្សា (១១+២)៖</strong> នាយកដ្ឋានសាលាគរុកោសល្យ និងវិក្រឹតការរាជធានី (លិខិតបញ្ជាក់ការសិក្សា ថ្ងៃទី ១២ សីហា ២០០១)។</li>
-            <li><strong>វិញ្ញាបនបត្របញ្ចប់វគ្គគរុកោសល្យ (២៩៣៤៧០)៖</strong> ចុះថ្ងៃទី ០៤ ខែ ០៧ ឆ្នាំ ២០០១។</li>
-            <li><strong>វិញ្ញាបនបត្របណ្តុះបណ្តាលគរុកោសល្យ (១៩៩១ – ១៩៩៣)៖</strong> សាលាគរុកោសល្យ និងវិក្រឹតការ រាជធានីភ្នំពេញ។</li>
-            <li><strong>វិទ្យាស្ថានកម្ពុជាដើម្បីសិទ្ធិមនុស្ស (១៩៩៦)៖</strong> វគ្គបណ្តុះបណ្តាលវិធីសាស្ត្របង្រៀនសិទ្ធិមនុស្សសម្រាប់សាលាបឋមសិក្សា (29 July – 03 August 1996) និងវិញ្ញាបនបត្រសិក្សា។</li>
-            <li><strong>ឯកសារពលរដ្ឋកម្ម (២០០១)៖</strong> វិញ្ញាបនបត្របញ្ចប់ការសិក្សា។</li>
-          </ul>
+      <!-- Education & Certificates -->
+      <section id="education">
+        <div class="section-header">
+          <h2>ប្រវត្តិការសិក្សា វគ្គបណ្តុះបណ្តាល និងវិញ្ញាបនបត្រ</h2>
+          <p>សញ្ញាបត្រ វិញ្ញាបនបត្រគរុកោសល្យ និងវគ្គបណ្តុះបណ្តាលផ្សេងៗ</p>
         </div>
-      </div>
-    </section>
+        <div class="grid-2">
+          <div class="card">
+            <h3>កម្រិតវប្បធម៌ទូទៅ</h3>
+            <ul class="list-clean">
+              <li><strong>មធ្យមសិក្សាទុតិយភូមិ (២០០៦ – ២០០៨)៖</strong> រៀនបំពេញវិជ្ជា នៅសាលាមធ្យម (សម័យប្រឡង ០៤ សីហា ២០០៨ មណ្ឌល ទ.ហ៊ុនសែន ប៊ុនរ៉ានី វត្តភ្នំ និទ្ទេស E)។</li>
+              <li><strong>មធ្យមសិក្សាបឋមភូមិ (១៩៩៤ – ១៩៩៨)៖</strong> សាលា វត្តកោះ (ក្រុងភ្នំពេញ)។</li>
+              <li><strong>បឋមសិក្សា (១៩៨២ – ១៩៨៩)៖</strong> សាលា វត្តព្រះស្រីតារពេជ្រ ខេត្តព្រៃវែង។</li>
+            </ul>
+          </div>
 
-    <!-- References & Contact -->
-    <section id="references">
-      <div class="section-header">
-        <h2>អ្នកផ្តល់ព័ត៌មានបន្ថែម និងទំនាក់ទំនង</h2>
-        <p>អ្នកយោងដែលអាចបញ្ជាក់ពីសមត្ថភាព និងបទពិសោធន៍</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <h3>អ្នកស្រី ហុក លក្ខណា</h3>
-          <p style="font-size: 13.5px; color: var(--muted);">មហាវិទ្យាល័យពុទ្ធិកសាស្ត្រវិទ្យា និងវិទ្យាសាស្ត្រ</p>
-          <p style="font-size: 13.5px; margin-top: 6px;"><strong>មុខរបរ៖</strong> សាស្ត្រាចារ្យពេញម៉ោង</p>
-          <p style="font-size: 13.5px; margin-top: 4px;"><strong>ទូរស័ព្ទ៖</strong> 012 904 371</p>
+          <div class="card">
+            <h3>គរុកោសល្យ និងវគ្គបណ្តុះបណ្តាល</h3>
+            <ul class="list-clean">
+              <li><strong>វិញ្ញាបនបត្រគ្រូបង្រៀនកម្រិតបឋមសិក្សា (១១+២)៖</strong> នាយកដ្ឋានសាលាគរុកោសល្យ និងវិក្រឹតការរាជធានី (លិខិតបញ្ជាក់ការសិក្សា ថ្ងៃទី ១២ សីហា ២០០១)។</li>
+              <li><strong>វិញ្ញាបនបត្របញ្ចប់វគ្គគរុកោសល្យ (២៩៣៤៧០)៖</strong> ចុះថ្ងៃទី ០៤ ខែ ០៧ ឆ្នាំ ២០០១។</li>
+              <li><strong>វិញ្ញាបនបត្របណ្តុះបណ្តាលគរុកោសល្យ (១៩៩១ – ១៩៩៣)៖</strong> សាលាគរុកោសល្យ និងវិក្រឹតការ រាជធានីភ្នំពេញ។</li>
+              <li><strong>វិទ្យាស្ថានកម្ពុជាដើម្បីសិទ្ធិមនុស្ស (១៩៩៦)៖</strong> វគ្គបណ្តុះបណ្តាលវិធីសាស្ត្របង្រៀនសិទ្ធិមនុស្សសម្រាប់សាលាបឋមសិក្សា (29 July – 03 August 1996) និងវិញ្ញាបនបត្រសិក្សា។</li>
+              <li><strong>ឯកសារពលរដ្ឋកម្ម (២០០១)៖</strong> វិញ្ញាបនបត្របញ្ចប់ការសិក្សា។</li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <div class="card">
-          <h3>អ្នកស្រី យ៉ន ដានីត</h3>
-          <p style="font-size: 13.5px; color: var(--muted);">សាលាឯកជន សុខា បញ្ញា</p>
-          <p style="font-size: 13.5px; margin-top: 6px;"><strong>មុខរបរ៖</strong> គ្រូបង្រៀនបឋមសិក្សា</p>
-          <p style="font-size: 13.5px; margin-top: 4px;"><strong>ទូរស័ព្ទ៖</strong> 092 267 10 24</p>
+      <!-- References & Contact -->
+      <section id="references">
+        <div class="section-header">
+          <h2>អ្នកផ្តល់ព័ត៌មានបន្ថែម និងទំនាក់ទំនង</h2>
+          <p>អ្នកយោងដែលអាចបញ្ជាក់ពីសមត្ថភាព និងបទពិសោធន៍</p>
         </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>អ្នកស្រី ហុក លក្ខណា</h3>
+            <p style="color: var(--muted);">មហាវិទ្យាល័យពុទ្ធិកសាស្ត្រវិទ្យា និងវិទ្យាសាស្ត្រ</p>
+            <p style="margin-top: 6px;"><strong>មុខរបរ៖</strong> សាស្ត្រាចារ្យពេញម៉ោង</p>
+            <p style="margin-top: 4px;"><strong>ទូរស័ព្ទ៖</strong> 012 904 371</p>
+          </div>
 
-        <div class="card">
-          <h3>ទំនាក់ទំនងផ្ទាល់</h3>
-          <p style="font-size: 13.5px; margin-top: 4px;"><strong>ឈ្មោះ៖</strong> ហង់ ស៊ីថា (Hang Sitha)</p>
-          <p style="font-size: 13.5px; margin-top: 4px;"><strong>ទូរស័ព្ទ៖</strong> 097 21​ 99​​​ 373 </p>
-          <p style="font-size: 13.5px; margin-top: 4px;"><strong>ទីលំនៅ៖</strong> ផ្ទះលេខ 79ស20 ភូមិ 7 សង្កាត់ទន្លេបាសាក់ ខណ្ឌចំការមន រាជធានីភ្នំពេញ</p>
+          <div class="card">
+            <h3>អ្នកស្រី យ៉ន ដានីត</h3>
+            <p style="color: var(--muted);">សាលាឯកជន សុខា បញ្ញា</p>
+            <p style="margin-top: 6px;"><strong>មុខរបរ៖</strong> គ្រូបង្រៀនបឋមសិក្សា</p>
+            <p style="margin-top: 4px;"><strong>ទូរស័ព្ទ៖</strong> 092 267 10 24</p>
+          </div>
+
+          <div class="card">
+            <h3>ទំនាក់ទំនងផ្ទាល់</h3>
+            <p><strong>ឈ្មោះ៖</strong> ហង់ ស៊ីថា (Hang Sitha)</p>
+            <p style="margin-top: 4px;"><strong>ទូរស័ព្ទ៖</strong> 097 21 99 373</p>
+            <p style="margin-top: 4px;"><strong>ទីលំនៅ៖</strong> ផ្ទះលេខ 79ស20 ភូមិ 7 សង្កាត់ទន្លេបាសាក់ ខណ្ឌចំការមន រាជធានីភ្នំពេញ</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-      </div>
+      </section>
     </section>
   </main>
 
